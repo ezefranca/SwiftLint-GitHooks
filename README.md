@@ -12,8 +12,14 @@ Then, the `pre-commit` script will check if this file has a `warning` string usi
 
 ```bash
 
-if grep -q "warning" swiftlint.txt; then
-  cecho "RED" "⚠️  Check this warnings before your commit  ⚠️"
+warnings="$(grep -q "warning" swiftlint.txt)"
+
+if $warnings > 0 ; then
+  if $warnings > 1; then
+    cecho "RED" "⚠️  Check these warnings before your commit  ⚠️"
+  else
+    cecho "RED" "⚠️  Check this warning before your commit  ⚠️"
+  fi
   cecho "YELLOW" "$(<swiftlint.txt)"
   exit 0
 fi
@@ -25,5 +31,3 @@ fi
 Then you have a nice output
 
 ![](/terminal.png)
-
-There is a typo here, because **this** is used to just **one** warning, **these** is used for multiple warnings. You can check the number of occurences and to choose between this or these, warning or warnings.
