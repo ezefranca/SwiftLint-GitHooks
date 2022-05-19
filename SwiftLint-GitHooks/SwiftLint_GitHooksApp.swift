@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SwiftLint_GitHooksApp: App {
+struct SwiftLintGitHooksApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

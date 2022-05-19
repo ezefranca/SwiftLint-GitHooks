@@ -11,6 +11,7 @@
 		276B20902836256500EB9F0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B208F2836256500EB9F0A /* ContentView.swift */; };
 		276B20922836256700EB9F0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276B20912836256700EB9F0A /* Assets.xcassets */; };
 		276B20952836256700EB9F0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276B20942836256700EB9F0A /* Preview Assets.xcassets */; };
+		CCE459C81CCDACC7562DB2A6 /* Pods_SwiftLint_GitHooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB01124D28AF39C60175BF95 /* Pods_SwiftLint_GitHooks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,9 @@
 		276B208F2836256500EB9F0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		276B20912836256700EB9F0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276B20942836256700EB9F0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		89C2144B3E2EA9B34C3BD6BC /* Pods-SwiftLint-GitHooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLint-GitHooks.debug.xcconfig"; path = "Target Support Files/Pods-SwiftLint-GitHooks/Pods-SwiftLint-GitHooks.debug.xcconfig"; sourceTree = "<group>"; };
+		AB01124D28AF39C60175BF95 /* Pods_SwiftLint_GitHooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLint_GitHooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C69D2D04E262583D03E29FC7 /* Pods-SwiftLint-GitHooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLint-GitHooks.release.xcconfig"; path = "Target Support Files/Pods-SwiftLint-GitHooks/Pods-SwiftLint-GitHooks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE459C81CCDACC7562DB2A6 /* Pods_SwiftLint_GitHooks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +42,8 @@
 			children = (
 				276B208C2836256500EB9F0A /* SwiftLint-GitHooks */,
 				276B208B2836256500EB9F0A /* Products */,
+				F100FD54E2920C4543EAB58A /* Pods */,
+				3549AAE5A3677DFA23CB6126 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3549AAE5A3677DFA23CB6126 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB01124D28AF39C60175BF95 /* Pods_SwiftLint_GitHooks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F100FD54E2920C4543EAB58A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89C2144B3E2EA9B34C3BD6BC /* Pods-SwiftLint-GitHooks.debug.xcconfig */,
+				C69D2D04E262583D03E29FC7 /* Pods-SwiftLint-GitHooks.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 276B20982836256700EB9F0A /* Build configuration list for PBXNativeTarget "SwiftLint-GitHooks" */;
 			buildPhases = (
+				2ABC05DE42AC75107E5C4F70 /* [CP] Check Pods Manifest.lock */,
 				276B20862836256500EB9F0A /* Sources */,
 				276B20872836256500EB9F0A /* Frameworks */,
 				276B20882836256500EB9F0A /* Resources */,
+				276B209B283625EC00EB9F0A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		276B209B283625EC00EB9F0A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint > swiftlint.html\n";
+		};
+		2ABC05DE42AC75107E5C4F70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftLint-GitHooks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		276B20862836256500EB9F0A /* Sources */ = {
@@ -261,6 +330,7 @@
 		};
 		276B20992836256700EB9F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C2144B3E2EA9B34C3BD6BC /* Pods-SwiftLint-GitHooks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +360,7 @@
 		};
 		276B209A2836256700EB9F0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69D2D04E262583D03E29FC7 /* Pods-SwiftLint-GitHooks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
