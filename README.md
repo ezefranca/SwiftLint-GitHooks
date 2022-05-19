@@ -6,6 +6,8 @@ This is an experiment using the `pre-commit` hook with SwiftLint.
 
 First, to generate the `swiftlint` log, I added a Build Phase Script on Xcode using the `>` operator to output directly on a file named `swiftlint.txt`.
 
+Don't forget to add the `swiftlint.txt` to your `.gitgnore`.
+
 ![](/buildphase.png)
 
 Then, the `pre-commit` script will check if this file has a `warning` string using the `grep` command.
