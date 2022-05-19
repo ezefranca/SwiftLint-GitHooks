@@ -26,4 +26,4 @@ Then you have a nice output
 
 ![](/terminal.png)
 
-There is a typo here, because **this** is just **one** warning, **these** for multiple warnings. You can check the number of occurences and to choose between this or these, warning or warnings.
+There is a typo here, because **this** is used to just **one** warning, **these** is used for multiple warnings. You can check the number of occurences and to choose between this or these, warning or warnings.
