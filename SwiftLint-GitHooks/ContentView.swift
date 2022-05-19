@@ -13,7 +13,6 @@ struct ContentView: View {
 
     let hasWarning2 :String = ""
 
-    
     var body: some View {
         Text("Hello, world!")
             .padding()
